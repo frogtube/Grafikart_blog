@@ -1,0 +1,9 @@
+<h1>Categories</h1>
+<a href="<%= new_category_path %>" class="btn btn-success">Créer une nouvelle catégorie</a>
+<% @categories.each do |category| %>
+    <h2><%= category.name %></h2>
+    <p><%= category.slug %></p>
+    <a href="<%= category_path(category.id) %>" class="btn btn-primary">Plus de détails</a>
+    <a href="<%= edit_category_path(category.id) %>" class="btn btn-warning">Modifier</a>
+    <a href="<%= category_path(category.id) %>" class="btn btn-danger" data-confirm="are you sure?" data-method="delete">Supprimer</a>
+<% end %>

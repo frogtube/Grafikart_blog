@@ -1,0 +1,12 @@
+<h1>Modifier la catégorie</h1>
+<%= form_for @category do |f| %>
+    <div class="form-group">
+        <label>Name</label>
+        <%= f.text_field :name, class: "form-control" %>
+        <label>Slug</label>
+        <%= f.text_field :slug, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-warning">Modifier</button>
+    </div>
+<% end %>
