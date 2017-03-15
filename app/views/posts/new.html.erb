@@ -1,0 +1,12 @@
+<h1>Nouvel l'aticle</h1>
+<%= form_for @post do |f| %>
+  <div class="form-group">
+    <label>Titre de l'article</label>
+    <%= f.text_field :name, class: "form-control" %><br />
+    <label>Contenu de l'article</label>
+    <%= f.text_area :content, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success">Soumettre l'article</button>
+  </div>
+<% end %>
